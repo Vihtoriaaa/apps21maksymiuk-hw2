@@ -5,34 +5,37 @@ public class Node {
     private Node next;
     private Object value;
 
-    public Node() {
+    public Node(Object value) {
+        this.value = value;
     }
 
-    @Override
-    public String toString() {
-        return value.toString();
+    public Node(Object val, Node prevValue, Node nextValue) {
+        this.value = val;
+        this.previous = prevValue;
+        this.next = nextValue;
     }
-
 
     public Node getPrevious() {
-        return null;
+        return previous;
     }
 
-    public void setPrevious(Node prev) {
+    public void setPrevious(Node setPrev) {
+        this.previous = setPrev;
     }
 
     public Object getValue() {
-        return null;
+        return value;
     }
 
-    public void setValue(Object val) {
+    public void setValue(Object setVal) {
+        this.value = setVal;
     }
 
     public Node getNext() {
-        return null;
+        return next;
     }
 
-    public void setNext(Node ne) {
+    public void setNext(Node setNext) {
+        this.next = setNext;
     }
 }
-
